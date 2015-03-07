@@ -1,0 +1,13 @@
+{
+    "name": "coffeetalkh/persianize",
+    "description": "Persian language tools for php",
+    "license": "Apache License 2.0",
+    "authors": [
+        {
+            "name": "Mehdi Hosseini",
+            "email": "mehdi.hosseini.dev@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
