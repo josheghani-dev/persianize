@@ -11,7 +11,7 @@ class Convert{
 
 	public $arabic_number = array( '٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩' );
 
-	public $arabic_yk = array( 'ي', '' );
+	public $arabic_yk = array( 'ي', 'ك' );
 
 	public $persian_yk = array( 'ی', 'ک' );
 
@@ -43,7 +43,7 @@ class Convert{
 
 		$this->result = str_replace( $this->english_number, $this->persian_number, $value );
 
-		$this->result = str_replace( $this->arabic_number, $this->persian_number, $value );
+		$this->result = str_replace( $this->arabic_number, $this->persian_number, $this->result );
 		
 		return $this;
 
