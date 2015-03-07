@@ -19,8 +19,8 @@ class Persian{
 	 ********************************
 	 * @return Convert Class
 	 */
-	public static function convert(){
-		return new Convert();
+	public static function convert( $value = NULL ){
+		return new Convert( $value );
 	}
 
 	/**********************************
@@ -34,5 +34,5 @@ class Persian{
 
 }
 
-Persian::convert()->number(10);
+echo Persian::convert(10)->number()->get();
 ?>
