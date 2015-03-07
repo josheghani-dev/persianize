@@ -31,7 +31,7 @@ class Convert{
 	}
 	
 	/**************************************************************************
-	 * Convert English and Arabic number to True Persian form
+	 * Convert english and arabic number to True Persian form
 	 **************************************************************************
 	 * @params Integer $value
 	 * @return Object
