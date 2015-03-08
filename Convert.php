@@ -66,6 +66,22 @@ class Convert{
 
 	}
 
+	/*******************************************************************
+	 * Detect persian verbs and replace space after "mi" with half-space
+	 *******************************************************************
+	 * @params string $value
+	 * @return Object
+	 */
+	public function halfSpace( $value = NULL ){
+
+		var_dump( preg_replace("#^((\x{0645}\x{06CC})|( )|([\x{0600}-\x{06EF}]){1,})+$#u", "$2 $1", "می روی", 1) );
+
+		exit;
+
+		return $this;
+
+	}
+
 	/******************************************
 	 * Return result of all operations on value
 	 ******************************************

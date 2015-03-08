@@ -33,6 +33,6 @@ class Persian{
 	}
 
 }
-
-echo Persian::convert(10)->number()->get();
+echo '<head><meta charset="UTF-8"></head>';
+echo Persian::convert(10)->halfSpace()->get();
 ?>
