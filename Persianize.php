@@ -34,5 +34,5 @@ class Persian{
 
 }
 echo '<head><meta charset="UTF-8"></head>';
-echo Persian::convert(10)->halfSpace()->get();
+echo Persian::convert('آمده ای')->halfSpace()->get();
 ?>
