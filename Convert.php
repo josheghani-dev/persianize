@@ -80,12 +80,12 @@ class Convert{
 		/*
 		 * Replace half-space between persian MI.
 		 */
-		$this->result = preg_replace("#^((\x{0645}\x{06CC})|( )|([\x{0600}-\x{06EF}]){1,})+$#u", "$2\xE2\x80\x8C$1", $value, 1);
+		$this->result = preg_replace("#((\x{0645}\x{06CC})+( )+([\x{0600}-\x{06EF}]{1,}){1,})#u", "$2\xE2\x80\x8C$4", $value, 1);
 
 		/*
 		 * Replace half-space between perisan De-Yii.
 		 */
-		$this->result = preg_replace("#^(([\x{0600}-\x{06EF}]{1,})+(\x{0647})+( )+(ای|ایی))+$#u", "$2$3\xE2\x80\x8C$5", $this->result, 1);
+		$this->result = preg_replace("#(([\x{0600}-\x{06EF}]{1,})+( )+(ای|ایی|اند|ایم|اید|ام){1})#u", "$2\xE2\x80\x8C$4", $this->result, -1);
 
 		return $this;
 
