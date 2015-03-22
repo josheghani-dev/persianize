@@ -12,6 +12,8 @@
 
 require_once('Convert.php');
 
+require_once('Validator.php');
+
 class Persian{
 	
 	/********************************
@@ -20,7 +22,9 @@ class Persian{
 	 * @return Convert Class
 	 */
 	public static function convert( $value = NULL ){
+		
 		return new Convert( $value );
+
 	}
 
 	/**********************************
@@ -30,9 +34,9 @@ class Persian{
 	 */
 	public static function validator(){
 
+		return new Validator( $value );
+
 	}
 
 }
-echo '<head><meta charset="UTF-8"></head>';
-echo Persian::convert('آمده ای ولی من رفته ام و می آییم')->halfSpace()->get();
 ?>
