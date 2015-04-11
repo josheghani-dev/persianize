@@ -49,6 +49,7 @@ class Validator{
 
 	}
 
+
 	/*****************************
 	 * Validate Persian text input
 	 *****************************
@@ -60,9 +61,27 @@ class Validator{
 		if( $value != NULL )
 			$this->result = $value;
 
-		$this->__temp = preg_match( '#/^([a-z]{1,})+$/#u', $this->result );
+		$this->__temp = preg_match( '#^([\x{0600}-\x{06FF}| |\x{200C}]{1,})+$#u', $this->result );
 
-		var_dump($this->__temp);
+		if( ! empty( $this->__temp ) )
+			$this->response = TRUE;
+
+		return $this;
+
+	}
+
+	/*****************************
+	 * Validate Persian num input
+	 *****************************
+	 * @param string $value
+	 * @return boolean
+	 */
+	public function num( $value = NULL ){
+
+		if( $value != NULL )
+			$this->result = $value;
+
+		$this->__temp = preg_match( '#^([\x{06F0}-\x{06F9}]{1,})+$#u', $this->result );
 
 		if( ! empty( $this->__temp ) )
 			$this->response = TRUE;
