@@ -29,6 +29,26 @@ class Validator{
 
 	}
 
+	/******************
+	 * Validate Runner
+	 ******************
+	 * @param string $value
+	 * @return boolean
+	 */
+	public function run( $pattern, $value = NULL ){
+
+		if( $value != NULL )
+			$this->result = $value;
+
+		$this->__temp = preg_match( $pattern, $this->result );
+
+		if( ! empty( $this->__temp ) )
+			$this->response = TRUE;
+
+		return $this;
+
+	}
+
 	/*********************************
 	 * Validate Persian Alphabet input
 	 *********************************
@@ -37,15 +57,7 @@ class Validator{
 	 */
 	public function alpha( $value = NULL ){
 
-		if( $value != NULL )
-			$this->result = $value;
-
-		$this->__temp = preg_match( '#^([\x{0600}-\x{06EF}]{1,})+$#u', $this->result );
-
-		if( ! empty( $this->__temp ) )
-			$this->response = TRUE;
-
-		return $this;
+		return $this->run( '#^([\x{0600}-\x{06EF}]{1,})+$#u', $value );
 
 	}
 
@@ -58,15 +70,7 @@ class Validator{
 	 */
 	public function text( $value = NULL ){
 
-		if( $value != NULL )
-			$this->result = $value;
-
-		$this->__temp = preg_match( '#^([\x{0600}-\x{06FF}| |\x{200C}]{1,})+$#u', $this->result );
-
-		if( ! empty( $this->__temp ) )
-			$this->response = TRUE;
-
-		return $this;
+		return $this->run( '#^([\x{0600}-\x{06FF}| |\x{200C}]{1,})+$#u', $value );
 
 	}
 
@@ -78,15 +82,32 @@ class Validator{
 	 */
 	public function num( $value = NULL ){
 
-		if( $value != NULL )
-			$this->result = $value;
+		return $this->run( '#^([\x{06F0}-\x{06F9}]{1,})+$#u', $value );
 
-		$this->__temp = preg_match( '#^([\x{06F0}-\x{06F9}]{1,})+$#u', $this->result );
+	}
 
-		if( ! empty( $this->__temp ) )
-			$this->response = TRUE;
+	/*****************************
+	 * Validate Iran Mobile input
+	 *****************************
+	 * @param string $value
+	 * @return boolean
+	 */
+	public function mobile( $value = NULL ){
 
-		return $this;
+		return $this->run( '/^(((98)|(\+98)|(0098)|0)(90|91|92|93){1}[0-9]{8})+$/', $value );
+
+	}
+
+
+	/*********************************
+	 * Validate Iran Postal-Code input
+	 *********************************
+	 * @param string $value
+	 * @return boolean
+	 */
+	public function postal( $value = NULL ){
+
+		return $this->run( '/^([0-9]{10})+$/', $value );
 
 	}
 
