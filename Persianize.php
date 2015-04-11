@@ -10,18 +10,18 @@
  \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
 */
 
-require_once('Convert.php');
+require_once( 'Convert.php' );
 
-require_once('Validator.php');
+require_once( 'Validator.php' );
 
-class Persian{
+class Persian {
 	
 	/********************************
 	 * Refer to Persian Convert class
 	 ********************************
 	 * @return Convert Class
 	 */
-	public static function convert( $value = NULL ){
+	public static function convert( $value = NULL ) {
 		
 		return new Convert( $value );
 
@@ -32,7 +32,7 @@ class Persian{
 	 **********************************
 	 * @return Validator Class
 	 */
-	public static function validator( $value = NULL ){
+	public static function validator( $value = NULL ) {
 
 		return new Validator( $value );
 

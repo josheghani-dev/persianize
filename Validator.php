@@ -10,7 +10,7 @@
  \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
 */
 
-class Validator{
+class Validator {
 
 	private $__temp;
 
@@ -18,7 +18,7 @@ class Validator{
 
 	private $response;
 
-	public function __construct( $value = NULL ){
+	public function __construct( $value = NULL ) {
 
 			$this->response = FALSE;
 
@@ -35,7 +35,7 @@ class Validator{
 	 * @param string $value
 	 * @return boolean
 	 */
-	public function run( $pattern, $value = NULL ){
+	public function run( $pattern, $value = NULL ) {
 
 		if( $value != NULL )
 			$this->result = $value;
@@ -55,7 +55,7 @@ class Validator{
 	 * @param string $value
 	 * @return boolean
 	 */
-	public function alpha( $value = NULL ){
+	public function alpha( $value = NULL ) {
 
 		return $this->run( '#^([\x{0600}-\x{06EF}]{1,})+$#u', $value );
 
@@ -68,7 +68,7 @@ class Validator{
 	 * @param string $value
 	 * @return boolean
 	 */
-	public function text( $value = NULL ){
+	public function text( $value = NULL ) {
 
 		return $this->run( '#^([\x{0600}-\x{06FF}| |\x{200C}]{1,})+$#u', $value );
 
@@ -80,7 +80,7 @@ class Validator{
 	 * @param string $value
 	 * @return boolean
 	 */
-	public function num( $value = NULL ){
+	public function num( $value = NULL ) {
 
 		return $this->run( '#^([\x{06F0}-\x{06F9}]{1,})+$#u', $value );
 
@@ -92,7 +92,7 @@ class Validator{
 	 * @param string $value
 	 * @return boolean
 	 */
-	public function mobile( $value = NULL ){
+	public function mobile( $value = NULL ) {
 
 		return $this->run( '/^(((98)|(\+98)|(0098)|0)(90|91|92|93){1}[0-9]{8})+$/', $value );
 
@@ -105,8 +105,8 @@ class Validator{
 	 * @param string $value
 	 * @return boolean
 	 */
-	public function postal( $value = NULL ){
-
+	public function postal( $value = NULL ) {
+ 
 		return $this->run( '/^([0-9]{10})+$/', $value );
 
 	}
@@ -116,7 +116,7 @@ class Validator{
 	 ******************************************
 	 * @return $string
 	 */
-	public function get(){
+	public function get() {
 
 		return $this->response;
 

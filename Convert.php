@@ -8,7 +8,7 @@
 
  \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
  */
-class Convert{
+class Convert {
 
 	private $arabic_number = array( "\xD9\xA0", "\xD9\xA1", "\xD9\xA2", "\xD9\xA3", "\xD9\xA4", "\xD9\xA5", "\xD9\xA6", "\xD9\xA7", "\xD9\xA8", "\xD9\xA9" );
 
@@ -22,7 +22,7 @@ class Convert{
 
 	private $result;
 
-	public function __construct( $value = NULL ){
+	public function __construct( $value = NULL ) {
 
 		if( $value != NULL )
 			$this->result = $value;
@@ -37,7 +37,7 @@ class Convert{
 	 * @params Integer $value
 	 * @return Object
 	 */
-	public function number( $value = NULL ){
+	public function number( $value = NULL ) {
 
 		if( $value == NULL )
 			$value = $this->result;
@@ -56,7 +56,7 @@ class Convert{
 	 * @params String $value
 	 * @return Object
 	 */
-	public function removeArabicChar( $value = NULL ){
+	public function removeArabicChar( $value = NULL ) {
 
 		if( $value == NULL )
 			$value = $this->result;
@@ -73,7 +73,7 @@ class Convert{
 	 * @params string $value
 	 * @return Object
 	 */
-	public function halfSpace( $value = NULL ){
+	public function halfSpace( $value = NULL ) {
 
 		if( $value == NULL )
 			$value = $this->result;
@@ -98,7 +98,7 @@ class Convert{
 	 * @param string $value
 	 * @return Object
 	 */
-	public function allOptions( $value = NULL ){
+	public function allOptions( $value = NULL ) {
 
 		if( $value == NULL )
 			$value = $this->result;
@@ -120,7 +120,7 @@ class Convert{
 	 ******************************************
 	 * @return $string
 	 */
-	public function get(){
+	public function get() {
 
 		return $this->result;
 
