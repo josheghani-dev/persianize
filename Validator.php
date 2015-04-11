@@ -16,7 +16,11 @@ class Validator{
 
 	private $result;
 
+	private $response;
+
 	public function __construct( $value = NULL ){
+
+			$this->response = FALSE;
 
 			if( $value != NULL )
 				$this->result = $value;
@@ -25,21 +29,43 @@ class Validator{
 
 	}
 
-	/*************************
-	 * Validate Alphabet input
-	 **************************
+	/*********************************
+	 * Validate Persian Alphabet input
+	 *********************************
 	 * @param string $value
 	 * @return boolean
 	 */
-	public function alpha( $value ){
+	public function alpha( $value = NULL ){
 
 		if( $value != NULL )
 			$this->result = $value;
 
-		$this->$__temp = preg_match( '^([\x{0600}-\x{06EF}]{1,})+$', $value );
+		$this->__temp = preg_match( '#^([\x{0600}-\x{06EF}]{1,})+$#u', $this->result );
 
-		if( empty( $this->$__temp ) )
-			
+		if( ! empty( $this->__temp ) )
+			$this->response = TRUE;
+
+		return $this;
+
+	}
+
+	/*****************************
+	 * Validate Persian text input
+	 *****************************
+	 * @param string $value
+	 * @return boolean
+	 */
+	public function text( $value = NULL ){
+
+		if( $value != NULL )
+			$this->result = $value;
+
+		$this->__temp = preg_match( '#/^([a-z]{1,})+$/#u', $this->result );
+
+		var_dump($this->__temp);
+
+		if( ! empty( $this->__temp ) )
+			$this->response = TRUE;
 
 		return $this;
 
@@ -52,7 +78,7 @@ class Validator{
 	 */
 	public function get(){
 
-		return $this->result;
+		return $this->response;
 
 	}
 

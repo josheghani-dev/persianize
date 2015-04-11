@@ -32,7 +32,7 @@ class Persian{
 	 **********************************
 	 * @return Validator Class
 	 */
-	public static function validator(){
+	public static function validator( $value = NULL ){
 
 		return new Validator( $value );
 
