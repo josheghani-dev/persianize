@@ -1,6 +1,14 @@
 # Persianize
 Persianize is set of php tools to validating and converting data in true persian.
 
+## Installation
+
+### Via Composer
+Add following line in ```require:{}```
+
+```php
+"coffeetalkh/persianize": "dev-master"
+```
 
 ## Convert
 This object helps you to change pharses to right persian
