@@ -7,13 +7,24 @@ Persianize is set of php tools for validating and converting data in true persia
 ## Installation
 
 ### Via Composer
-Add following line to composer.json and then run ```composer update``` on console.
+Add following package to composer.json and then run ```composer update``` on console for manual installation.
 
 ```php
 require: { 
-			"coffeetalkh/persianize": "dev-master"
+			"coffeetalkh/persianize":"dev-master"
 		 }
 ```
+
+Or run following command and then update composer by ```composer update```
+
+```php
+composer require "coffeetalkh/persianize":"dev-master"
+// OR, if you just have composer.phar
+php composer.phar require "coffeetalkh/persianize":"dev-master"
+```
+
+### Manual installation
+If you didn't use dependency management systems you can install persianize in manual way, download ZIP file and then extract it and all you need if require 'Persianize.php' file on your project and use ```Persian``` Class.
 
 ## Convert
 This object helps you to change pharses to right persian
