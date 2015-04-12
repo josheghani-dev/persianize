@@ -47,11 +47,22 @@
 <h3>
 <a id="via-composer" class="anchor" href="#via-composer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Via Composer</h3>
 
-<p>Add following line to composer.json and then run <code>composer update</code> on console.</p>
+<p>Add following package to composer.json and then run <code>composer update</code> on console for manual installation.</p>
 
 <div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-k">require</span>: { </span>
-<span class="pl-s1">            <span class="pl-s"><span class="pl-pds">"</span>coffeetalkh/persianize<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>dev-master<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">            <span class="pl-s"><span class="pl-pds">"</span>coffeetalkh/persianize<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>dev-master<span class="pl-pds">"</span></span></span>
 <span class="pl-s1">         }</span></pre></div>
+
+<p>Or run following command and then update composer by <code>composer update</code></p>
+
+<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-c1">composer</span> <span class="pl-k">require</span> <span class="pl-s"><span class="pl-pds">"</span>coffeetalkh/persianize<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>dev-master<span class="pl-pds">"</span></span></span>
+<span class="pl-s1"><span class="pl-c">// OR, if you just have composer.phar</span></span>
+<span class="pl-s1"><span class="pl-c1">php</span> <span class="pl-c1">composer</span><span class="pl-k">.</span><span class="pl-c1">phar</span> <span class="pl-k">require</span> <span class="pl-s"><span class="pl-pds">"</span>coffeetalkh/persianize<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>dev-master<span class="pl-pds">"</span></span></span></pre></div>
+
+<h3>
+<a id="manual-installation" class="anchor" href="#manual-installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Manual installation</h3>
+
+<p>If you didn't use dependency management systems you can install persianize in manual way, download ZIP file and then extract it and all you need if require 'Persianize.php' file on your project and use <code>Persian</code> Class.</p>
 
 <h2>
 <a id="convert" class="anchor" href="#convert" aria-hidden="true"><span class="octicon octicon-link"></span></a>Convert</h2>
