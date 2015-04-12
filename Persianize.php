@@ -5,7 +5,7 @@
  * @author Mehdi Hosseini <mehdi.hosseini.dev@gmail.com>
  * @license Apache License 2.0
  * @since 07 March 2015
- * @version 0.0.0
+ * @version 1.0.0
 
  \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
 */

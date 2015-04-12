@@ -5,7 +5,7 @@
  * @author Mehdi Hosseini <mehdi.hosseini.dev@gmail.com>
  * @license Apache License 2.0
  * @since 22 March 2015
- * @version 0.0.0
+ * @version 1.0.0
 
  \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
 */
@@ -58,6 +58,18 @@ class Validator {
 	public function alpha( $value = NULL ) {
 
 		return $this->run( '#^([\x{0600}-\x{06EF}]{1,})+$#u', $value );
+
+	}
+
+	/********************************************
+	 * Validate Persian Alphabet and number input
+	 ********************************************
+	 * @param string $value
+	 * @return boolean
+	 */
+	public function alpha_num( $value = NULL ) {
+
+		return $this->run( '#^([\x{0600}-\x{06FF}]{1,})+$#u', $value );
 
 	}
 
