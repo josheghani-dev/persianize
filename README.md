@@ -1,8 +1,8 @@
 # Persianize
 Persianize is set of php tools for validating and converting data in true persian.
 
-* [Convert](#Convert)
-* [Validate](#Validate)
+* [Convert](#convert)
+* [Validate](#validate)
 
 ## Installation
 
