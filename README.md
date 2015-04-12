@@ -60,6 +60,13 @@ Validate Persian Number
 Persian::validator('۱۲۳')->num()->get(); // Output --> TRUE
 ```
 
+### Alphabel and Number
+Validate Persian AlphaNumeric value
+
+```php
+Persian::validator('فارسی۱۲۳')->num()->get(); // Output --> TRUE
+```
+
 ### Text
 Validate True Perisan text, contains aplha, numeric, space and half-space
 
