@@ -7,10 +7,12 @@ Persianize is set of php tools for validating and converting data in true persia
 ## Installation
 
 ### Via Composer
-Add following line in ```require:{}```
+Add following line to composer.json and then run ```composer update``` on console.
 
 ```php
-"coffeetalkh/persianize": "dev-master"
+require: { 
+			"coffeetalkh/persianize": "dev-master"
+		 }
 ```
 
 ## Convert
