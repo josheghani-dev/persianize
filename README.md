@@ -52,7 +52,7 @@ $convert->removeArabicCht('فارسي')->get(); // Output --> فارسی
 ### Replace space with half-space
 Detect persian verbs and replace space with half-space
 ```php
-$convert('می روی')->halfSpace()->get(); // Output --> می‌روی
+$convert->halfSpace('می روی')->get(); // Output --> می‌روی
 ```
 
 ### Full Convert
@@ -110,5 +110,5 @@ $validator->mobile('+9891212345678')->get(); // Output --> TRUE
 Validate Iran postal code
 
 ```php
-$validator>postal('1234567789')-->get(); // Output --> TRUE
+$validator->postal('1234567789')->get(); // Output --> TRUE
 ```
