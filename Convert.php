@@ -8,6 +8,9 @@
 
  \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
  */
+
+namespace persianize\convert;
+
 class Convert {
 
 	private $arabic_number = array( "\xD9\xA0", "\xD9\xA1", "\xD9\xA2", "\xD9\xA3", "\xD9\xA4", "\xD9\xA5", "\xD9\xA6", "\xD9\xA7", "\xD9\xA8", "\xD9\xA9" );
@@ -30,7 +33,7 @@ class Convert {
 		return $this;
 
 	}
-	
+
 	/**************************************************************************
 	 * Convert english and arabic number to True Persian form
 	 **************************************************************************
@@ -45,7 +48,7 @@ class Convert {
 		$this->result = str_replace( $this->english_number, $this->persian_number, $value );
 
 		$this->result = str_replace( $this->arabic_number, $this->persian_number, $this->result );
-		
+
 		return $this;
 
 	}
@@ -105,9 +108,9 @@ class Convert {
 
 
 		$this->number( $value );
-		
+
 		$this->removeArabicChar( $value );
-		
+
 		$this->halfSpace( $value );
 
 		return $this;

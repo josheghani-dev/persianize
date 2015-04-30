@@ -10,20 +10,22 @@
  \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
 */
 
+namespace persianize\validator;
+
 class Validator {
 
-	private $__temp;
+	private static $__temp;
 
-	private $result;
+	private static $result;
 
-	private $response;
+	private static $response;
 
 	public function __construct( $value = NULL ) {
 
-			$this->response = FALSE;
+			self::$response = FALSE;
 
 			if( $value != NULL )
-				$this->result = $value;
+				self::$result = $value;
 
 			return $this;
 
@@ -38,12 +40,12 @@ class Validator {
 	public function run( $pattern, $value = NULL ) {
 
 		if( $value != NULL )
-			$this->result = $value;
+			self::$result = $value;
 
-		$this->__temp = preg_match( $pattern, $this->result );
+		self::$__temp = preg_match( $pattern, self::$result );
 
-		if( ! empty( $this->__temp ) )
-			$this->response = TRUE;
+		if( ! empty( self::$__temp ) )
+			self::$response = TRUE;
 
 		return $this;
 
@@ -118,7 +120,7 @@ class Validator {
 	 * @return boolean
 	 */
 	public function postal( $value = NULL ) {
- 
+
 		return $this->run( '/^([0-9]{10})+$/', $value );
 
 	}
@@ -130,7 +132,11 @@ class Validator {
 	 */
 	public function get() {
 
-		return $this->response;
+		$__temp = self::$response;
+
+		self::$response = FALSE;
+
+		return $__temp;
 
 	}
 
