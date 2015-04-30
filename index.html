@@ -49,7 +49,7 @@
 
 <p>Add following package to composer.json and then run <code>composer update</code> on console for manual installation.</p>
 
-<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-k">require</span>: { </span>
+<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-k">require</span>: {</span>
 <span class="pl-s1">            <span class="pl-s"><span class="pl-pds">"</span>coffeetalkh/persianize<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>dev-master<span class="pl-pds">"</span></span></span>
 <span class="pl-s1">         }</span></pre></div>
 
@@ -69,80 +69,88 @@
 
 <p>This object helps you to change pharses to right persian</p>
 
+<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">persianize\convert</span>;</span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-smi">$convert</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-c1">persianize\convert\</span><span class="pl-c1">Convert</span>;</span></pre></div>
+
 <h3>
 <a id="number" class="anchor" href="#number" aria-hidden="true"><span class="octicon octicon-link"></span></a>Number</h3>
 
 <p>Convert English and Arabic numbers to Persian numbers.</p>
 
-<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-c1">echo</span> <span class="pl-c1">Persian</span><span class="pl-k">::</span>convert(<span class="pl-s"><span class="pl-pds">'</span>0123456789<span class="pl-pds">'</span></span>)<span class="pl-k">-&gt;</span>number()<span class="pl-k">-&gt;</span>get(); <span class="pl-c">// Output --&gt; ۰۱۲۳۴۵۶۷۸۹</span></span></pre></div>
+<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-smi">$convert</span><span class="pl-k">-&gt;</span>number(<span class="pl-s"><span class="pl-pds">'</span>0123456789<span class="pl-pds">'</span></span>)<span class="pl-k">-&gt;</span>get(); <span class="pl-c">// Output --&gt; ۰۱۲۳۴۵۶۷۸۹</span></span></pre></div>
 
 <h3>
 <a id="remove-arabic-charachter" class="anchor" href="#remove-arabic-charachter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Remove Arabic charachter</h3>
 
 <p>Remove Arabic keyboard charachters from persian text.</p>
 
-<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-c1">echo</span> <span class="pl-c1">Persian</span><span class="pl-k">::</span>convert(<span class="pl-s"><span class="pl-pds">'</span>فارسي<span class="pl-pds">'</span></span>)<span class="pl-k">-&gt;</span>removeArabicChar()<span class="pl-k">-&gt;</span>get(); <span class="pl-c">// Output --&gt; فارسی</span></span></pre></div>
+<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-smi">$convert</span><span class="pl-k">-&gt;</span>removeArabicChar(<span class="pl-s"><span class="pl-pds">'</span>فارسي<span class="pl-pds">'</span></span>)<span class="pl-k">-&gt;</span>get(); <span class="pl-c">// Output --&gt; فارسی</span></span></pre></div>
 
 <h3>
 <a id="replace-space-with-half-space" class="anchor" href="#replace-space-with-half-space" aria-hidden="true"><span class="octicon octicon-link"></span></a>Replace space with half-space</h3>
 
 <p>Detect persian verbs and replace space with half-space</p>
 
-<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-c1">echo</span> <span class="pl-c1">Persian</span><span class="pl-k">::</span>convert(<span class="pl-s"><span class="pl-pds">'</span>می روی<span class="pl-pds">'</span></span>)<span class="pl-k">-&gt;</span>halfSpace()<span class="pl-k">-&gt;</span>get(); <span class="pl-c">// Output --&gt; می‌روی</span></span></pre></div>
+<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-smi">$convert</span><span class="pl-k">-&gt;</span>halfSpace(<span class="pl-s"><span class="pl-pds">'</span>می روی<span class="pl-pds">'</span></span>)<span class="pl-k">-&gt;</span>get(); <span class="pl-c">// Output --&gt; می‌روی</span></span></pre></div>
 
 <h3>
 <a id="full-convert" class="anchor" href="#full-convert" aria-hidden="true"><span class="octicon octicon-link"></span></a>Full Convert</h3>
 
 <p>This method will convert number, convert arabic charachters to persian and replace space with half-space.</p>
 
-<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-c1">echo</span> <span class="pl-c1">Persian</span><span class="pl-k">::</span>convert(<span class="pl-s"><span class="pl-pds">'</span>فارسي 1<span class="pl-pds">'</span></span>)<span class="pl-k">-&gt;</span>halfSpace()<span class="pl-k">-&gt;</span>get(); <span class="pl-c">// Output --&gt; فارسی ۱</span></span></pre></div>
+<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-smi">$convert</span><span class="pl-k">-&gt;</span>allOptions(<span class="pl-s"><span class="pl-pds">'</span>فارسي 1<span class="pl-pds">'</span></span>)<span class="pl-k">-&gt;</span>get(); <span class="pl-c">// Output --&gt; فارسی ۱</span></span></pre></div>
 
 <h2>
 <a id="validate" class="anchor" href="#validate" aria-hidden="true"><span class="octicon octicon-link"></span></a>Validate</h2>
 
 <p>Validating Persian language inputs like persian number, persian alphabet...</p>
 
+<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">persianize\validator</span>;</span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-smi">$validator</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-c1">persianize\validator\</span><span class="pl-c1">validator</span>;</span></pre></div>
+
 <h3>
 <a id="alphabel" class="anchor" href="#alphabel" aria-hidden="true"><span class="octicon octicon-link"></span></a>Alphabel</h3>
 
 <p>Validate Persian Alphabet</p>
 
-<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-c1">Persian</span><span class="pl-k">::</span>validator(<span class="pl-s"><span class="pl-pds">'</span>فارسی<span class="pl-pds">'</span></span>)<span class="pl-k">-&gt;</span>alpha()<span class="pl-k">-&gt;</span>get(); <span class="pl-c">// Output --&gt; TRUE</span></span></pre></div>
+<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-smi">$validator</span><span class="pl-k">-&gt;</span>alpha(<span class="pl-s"><span class="pl-pds">'</span>فارسی<span class="pl-pds">'</span></span>)<span class="pl-k">-&gt;</span>get(); <span class="pl-c">// Output --&gt; TRUE</span></span></pre></div>
 
 <h3>
 <a id="number-1" class="anchor" href="#number-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Number</h3>
 
 <p>Validate Persian Number</p>
 
-<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-c1">Persian</span><span class="pl-k">::</span>validator(<span class="pl-s"><span class="pl-pds">'</span>۱۲۳<span class="pl-pds">'</span></span>)<span class="pl-k">-&gt;</span>num()<span class="pl-k">-&gt;</span>get(); <span class="pl-c">// Output --&gt; TRUE</span></span></pre></div>
+<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-smi">$validator</span><span class="pl-k">-&gt;</span>num(<span class="pl-s"><span class="pl-pds">'</span>۱۲۳<span class="pl-pds">'</span></span>)<span class="pl-k">-&gt;</span>get(); <span class="pl-c">// Output --&gt; TRUE</span></span></pre></div>
 
 <h3>
 <a id="alphabel-and-number" class="anchor" href="#alphabel-and-number" aria-hidden="true"><span class="octicon octicon-link"></span></a>Alphabel and Number</h3>
 
 <p>Validate Persian AlphaNumeric value</p>
 
-<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-c1">Persian</span><span class="pl-k">::</span>validator(<span class="pl-s"><span class="pl-pds">'</span>فارسی۱۲۳<span class="pl-pds">'</span></span>)<span class="pl-k">-&gt;</span>num()<span class="pl-k">-&gt;</span>get(); <span class="pl-c">// Output --&gt; TRUE</span></span></pre></div>
+<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-smi">$validator</span><span class="pl-k">-&gt;</span>num(<span class="pl-s"><span class="pl-pds">'</span>فارسی۱۲۳<span class="pl-pds">'</span></span>)<span class="pl-k">-&gt;</span>get(); <span class="pl-c">// Output --&gt; TRUE</span></span></pre></div>
 
 <h3>
 <a id="text" class="anchor" href="#text" aria-hidden="true"><span class="octicon octicon-link"></span></a>Text</h3>
 
 <p>Validate True Perisan text, contains aplha, numeric, space and half-space</p>
 
-<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-c1">Persian</span><span class="pl-k">::</span>validator(<span class="pl-s"><span class="pl-pds">'</span>این ۱ عبارت فارسی است<span class="pl-pds">'</span></span>)<span class="pl-k">-&gt;</span>text()<span class="pl-k">-&gt;</span>get(); <span class="pl-c">// Output --&gt; TRUE</span></span></pre></div>
+<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-smi">$validator</span><span class="pl-k">-&gt;</span>text(<span class="pl-s"><span class="pl-pds">'</span>این ۱ عبارت فارسی است<span class="pl-pds">'</span></span>)<span class="pl-k">-&gt;</span>get(); <span class="pl-c">// Output --&gt; TRUE</span></span></pre></div>
 
 <h3>
 <a id="mobile" class="anchor" href="#mobile" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mobile</h3>
 
 <p>Validate Iran Mobile numbers</p>
 
-<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-c1">Persian</span><span class="pl-k">::</span>validator(<span class="pl-s"><span class="pl-pds">'</span>+9891212345678<span class="pl-pds">'</span></span>)<span class="pl-k">-&gt;</span>mobile()<span class="pl-k">-&gt;</span>get(); <span class="pl-c">// Output --&gt; TRUE</span></span></pre></div>
+<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-smi">$validator</span><span class="pl-k">-&gt;</span>mobile(<span class="pl-s"><span class="pl-pds">'</span>+9891212345678<span class="pl-pds">'</span></span>)<span class="pl-k">-&gt;</span>get(); <span class="pl-c">// Output --&gt; TRUE</span></span></pre></div>
 
 <h3>
 <a id="postal-code" class="anchor" href="#postal-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Postal Code</h3>
 
 <p>Validate Iran postal code</p>
 
-<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-c1">Persian</span><span class="pl-k">::</span>validator(<span class="pl-s"><span class="pl-pds">'</span>1234567789<span class="pl-pds">'</span></span>)<span class="pl-k">-&gt;</span>postal()<span class="pl-k">-&gt;</span>get(); <span class="pl-c">// Output --&gt; TRUE</span></span></pre></div>
+<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-smi">$validator</span><span class="pl-k">-&gt;</span>postal(<span class="pl-s"><span class="pl-pds">'</span>1234567789<span class="pl-pds">'</span></span>)<span class="pl-k">-&gt;</span>get(); <span class="pl-c">// Output --&gt; TRUE</span></span></pre></div>
         </section>
 
         <footer>
