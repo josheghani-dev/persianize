@@ -62,6 +62,14 @@ This method will convert number, convert arabic charachters to persian and repla
 $convert->allOptions('فارسي 1')->get(); // Output --> فارسی ۱
 ```
 
+### Use multi-options on single statement
+
+```php
+$convert->removeArabicChar('می روي')->halfSpace()->get(); // Output --> می‌روی
+
+$convert->removeArabicChar('می روي 1')->halfSpace()->number()->get() // Output --> می‌روی ۱
+```
+
 ## Validate
 Validating Persian language inputs like persian number, persian alphabet...
 
