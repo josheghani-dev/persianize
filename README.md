@@ -66,7 +66,7 @@ $convert->halfSpac('فارسي 1')->get(); // Output --> فارسی ۱
 Validating Persian language inputs like persian number, persian alphabet...
 
 ```php
-use persianize\validate;
+use persianize\validator;
 
 $validator = new persianize\validator\validator;
 ```
