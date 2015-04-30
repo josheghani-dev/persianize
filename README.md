@@ -68,7 +68,7 @@ Validating Persian language inputs like persian number, persian alphabet...
 ```php
 use persianize\validator;
 
-$validator = new persianize\validator\validator;
+$validator = new persianize\validator\Validator;
 ```
 
 ### Alphabel
