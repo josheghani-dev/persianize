@@ -46,7 +46,7 @@ $convert->number('0123456789')->get(); // Output --> ۰۱۲۳۴۵۶۷۸۹
 Remove Arabic keyboard charachters from persian text.
 
 ```php
-$convert->removeArabicCht('فارسي')->get(); // Output --> فارسی
+$convert->removeArabicChar('فارسي')->get(); // Output --> فارسی
 ```
 
 ### Replace space with half-space
