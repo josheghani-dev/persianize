@@ -59,7 +59,7 @@ $convert->halfSpace('می روی')->get(); // Output --> می‌روی
 This method will convert number, convert arabic charachters to persian and replace space with half-space.
 
 ```php
-$convert->halfSpace('فارسي 1')->get(); // Output --> فارسی ۱
+$convert->allOptions('فارسي 1')->get(); // Output --> فارسی ۱
 ```
 
 ## Validate
