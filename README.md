@@ -1,5 +1,5 @@
 # Persianize
-Persianize is set of php tools for validating and converting data in true persian.
+Persianize is set of php tools for validating and converting data in true Persian.
 
 * [Convert](#convert)
 * [Validate](#validate)
@@ -24,7 +24,7 @@ php composer.phar require "coffeetalkh/persianize":"dev-master"
 ```
 
 ### Manual installation
-If you didn't use dependency management systems you can install persianize in manual way, download ZIP file and then extract it and all you need if require 'Persianize.php' file on your project and use ```Persian``` Class.
+If you didn't use dependency management systems you can install ```Persianize``` in manual way, download ZIP file and then extract it and all you need if require 'Persianize.php' file on your project and use ```Persian``` Class.
 
 ## Convert
 This object helps you to change pharses to right persian
@@ -42,21 +42,21 @@ Convert English and Arabic numbers to Persian numbers.
 $convert->number('0123456789')->get(); // Output --> ۰۱۲۳۴۵۶۷۸۹
 ```
 
-### Remove Arabic charachter
-Remove Arabic keyboard charachters from persian text.
+### Remove Arabic character
+Remove Arabic keyboard characters from persian text.
 
 ```php
 $convert->removeArabicChar('فارسي')->get(); // Output --> فارسی
 ```
 
 ### Replace space with half-space
-Detect persian verbs and replace space with half-space
+Detect Persian verbs and replace space with half-space
 ```php
 $convert->halfSpace('می روی')->get(); // Output --> می‌روی
 ```
 
 ### Full Convert
-This method will convert number, convert arabic charachters to persian and replace space with half-space.
+This method will convert number, convert arabic characters to persian and replace space with half-space.
 
 ```php
 $convert->allOptions('فارسي 1')->get(); // Output --> فارسی ۱
@@ -71,7 +71,7 @@ $convert->removeArabicChar('می روي 1')->halfSpace()->number()->get() // Out
 ```
 
 ## Validate
-Validating Persian language inputs like persian number, persian alphabet...
+Validating Persian language inputs like Persian number, Persian alphabet...
 
 ```php
 use persianize\validator;
@@ -80,28 +80,28 @@ $validator = new persianize\validator\Validator;
 ```
 
 ### Alphabel
-Validate Persian Alphabet
+Validate Persian alphabet
 
 ```php
 $validator->alpha('فارسی')->get(); // Output --> TRUE
 ```
 
 ### Number
-Validate Persian Number
+Validate Persian number
 
 ```php
 $validator->num('۱۲۳')->get(); // Output --> TRUE
 ```
 
-### Alphabel and Number
-Validate Persian AlphaNumeric value
+### Alphabet and Number
+Validate Persian alphaNumeric value
 
 ```php
 $validator->num('فارسی۱۲۳')->get(); // Output --> TRUE
 ```
 
 ### Text
-Validate True Perisan text, contains aplha, numeric, space and half-space
+Validate True Perisan text, contains alpha, numeric, space and half-space
 
 ```php
 $validator->text('این ۱ عبارت فارسی است')->get(); // Output --> TRUE
