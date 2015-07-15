@@ -15,9 +15,9 @@ class Convert {
 
 	private $arabic_number = array( "\xD9\xA0", "\xD9\xA1", "\xD9\xA2", "\xD9\xA3", "\xD9\xA4", "\xD9\xA5", "\xD9\xA6", "\xD9\xA7", "\xD9\xA8", "\xD9\xA9" );
 
-	private $arabic_yk = array( "\xD9\x8A", "\xD9\x83" );
+	private $arabic_yk = array( "\xD9\x8A", "\xD9\x83", "\xD8\xA9" );
 
-	private $persian_yk = array( "\xDB\x8C", "\xDA\xA9" );
+	private $persian_yk = array( "\xDB\x8C", "\xDA\xA9", "\xD9\x87" );
 
 	private $persian_number = array( "\xDB\xB0", "\xDB\xB1", "\xDB\xB2", "\xDB\xB3", "\xDB\xB4", "\xDB\xB5", "\xDB\xB6", "\xDB\xB7", "\xDB\xB8", "\xDB\xB9" );
 
@@ -84,7 +84,7 @@ class Convert {
 		/*
 		 * Replace half-space between persian MI.
 		 */
-		$this->result = preg_replace("#((\x{0645}\x{06CC})+( )+([\x{0600}-\x{06EF}]{1,}){1,})#u", "$2\xE2\x80\x8C$4", $value, 1);
+		$this->result = preg_replace("#((\s\x{0645}\x{06CC})+( )+([\x{0600}-\x{06EF}]{1,}){1,})#u", "$2\xE2\x80\x8C$4", $value, 1);
 
 		/*
 		 * Replace half-space between perisan De-Yii.
