@@ -1,4 +1,5 @@
-<?php
+<?php namespace persianize\convert;
+
 /********************************************************
  * Convert tools for create true persian text format
  ********************************************************
@@ -8,9 +9,6 @@
 
  \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
  */
-
-namespace persianize\convert;
-
 class Convert {
 
 	private $arabic_number = array( "\xD9\xA0", "\xD9\xA1", "\xD9\xA2", "\xD9\xA3", "\xD9\xA4", "\xD9\xA5", "\xD9\xA6", "\xD9\xA7", "\xD9\xA8", "\xD9\xA9" );

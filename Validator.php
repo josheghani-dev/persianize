@@ -1,4 +1,5 @@
-<?php
+<?php namespace persianize\validator;
+
 /*******************************************************
  * Persianize is persian language tools for PHP
  *******************************************************
@@ -6,12 +7,9 @@
  * @license Apache License 2.0
  * @since 22 March 2015
  * @version 1.0.0
-
- \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
-*/
-
-namespace persianize\validator;
-
+ *
+ *\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+ */
 class Validator {
 
 	private static $__temp;
