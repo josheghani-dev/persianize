@@ -1,3 +1,5 @@
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/coffeetalkh/persianize/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/coffeetalkh/persianize/?branch=master)
+
 # Persianize
 Persianize is set of php tools for validating and converting data in true Persian.
 
