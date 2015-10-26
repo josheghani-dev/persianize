@@ -1,6 +1,7 @@
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/coffeetalkh/persianize/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/coffeetalkh/persianize/?branch=master)
-
 # Persianize
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/coffeetalkh/persianize/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/coffeetalkh/persianize/?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/coffeetalkh/persianize/v/stable)](https://packagist.org/packages/coffeetalkh/persianize) [![Total Downloads](https://poser.pugx.org/coffeetalkh/persianize/downloads)](https://packagist.org/packages/coffeetalkh/persianize) [![Latest Unstable Version](https://poser.pugx.org/coffeetalkh/persianize/v/unstable)](https://packagist.org/packages/coffeetalkh/persianize) [![License](https://poser.pugx.org/coffeetalkh/persianize/license)](https://packagist.org/packages/coffeetalkh/persianize)
+
 Persianize is set of php tools for validating and converting data in true Persian.
 
 * [Convert](#convert)
