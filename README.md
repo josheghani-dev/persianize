@@ -123,3 +123,5 @@ Validate Iran postal code
 ```php
 $validator->postal('1234567789')->get(); // Output --> TRUE
 ```
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/opencafe/datium/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
