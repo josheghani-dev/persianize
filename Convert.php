@@ -1,4 +1,4 @@
-<?php namespace persianize\convert;
+<?php namespace Persianize;
 
 /********************************************************
  * Convert tools for create true persian text format

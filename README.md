@@ -30,12 +30,12 @@ php composer.phar require "coffeetalkh/persianize":"dev-master"
 If you didn't use dependency management systems you can install ```Persianize``` in manual way, download ZIP file and then extract it and all you need if require 'Persianize.php' file on your project and use ```Persian``` Class.
 
 ## Convert
-This object helps you to change pharses to right persian
+This object helps you to change phrases to right persian
 
 ```php
-use persianize\convert;
+use Persianize\Convert;
 
-$convert = new persianize\convert\Convert;
+$convert = new Convert;
 ```
 
 ### Number
@@ -77,9 +77,9 @@ $convert->removeArabicChar('می روي 1')->halfSpace()->number()->get() // Out
 Validating Persian language inputs like Persian number, Persian alphabet...
 
 ```php
-use persianize\validator;
+use Persianize\Validator;
 
-$validator = new persianize\validator\Validator;
+$validator = new Validator;
 ```
 
 ### Alphabel

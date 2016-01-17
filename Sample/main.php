@@ -4,13 +4,13 @@ require_once( '../Convert.php' );
 
 require_once( '../Validator.php' );
 
-use persianize\validator;
+use Persianize\Validator;
 
-use persianize\convert;
+use Persianize\Convert;
 
-$validator = new persianize\validator\Validator;
+$validator = new Validator;
 
-$convert = new persianize\convert\Convert;
+$convert = new Convert;
 
 echo '<head><meta charset="UTF-8"></head>';
 

@@ -1,4 +1,4 @@
-<?php namespace persianize\validator;
+<?php namespace Persianize;
 
 /*******************************************************
  * Persianize is persian language tools for PHP
