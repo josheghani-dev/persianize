@@ -1,12 +1,20 @@
 {
-    "name": "coffeetalkh/persianize",
-    "description": "Persian language tools for php",
-    "license": "Apache License 2.0",
-    "authors": [
-        {
-            "name": "Mehdi Hosseini",
-            "email": "mehdi.hosseini.dev@gmail.com"
-        }
-    ],
-    "require": {}
+  "name": "coffeetalkh/persianize",
+  "description": "Persian language tools for php",
+  "type": "library",
+  "license": "Apache License 2.0",
+  "authors": [
+    {
+      "name": "Mehdi Hosseini",
+      "email": "mehdi.hosseini.dev@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5"
+  },
+  "autoload":{
+    "psr-4":{
+      "Persianize\\": "src/"
+    }
+  }
 }
