@@ -14,16 +14,20 @@ Add following package to composer.json and then run ```composer update``` on con
 
 ```php
 require: {
-			"coffeetalkh/persianize":"dev-master"
-		 }
+	"coffeetalkh/persianize":"dev-master"
+}
 ```
 
 Or run following command and then update composer by ```composer update```
 
-```php
-composer require "coffeetalkh/persianize":"dev-master"
-// OR, if you just have composer.phar
-php composer.phar require "coffeetalkh/persianize":"dev-master"
+```
+composer require coffeetalkh/persianize
+```
+
+OR, if you just have composer.phar
+
+```
+php composer.phar require coffeetalkh/persianize
 ```
 
 ### Manual installation
